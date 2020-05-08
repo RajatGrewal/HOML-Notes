@@ -129,10 +129,11 @@ There are two things that can go wrong - bad data or bad algorithm
 Training the model on the training set and tuning the hyperparameters using the test set can lead to overfitting on the test set and hence the model fails to generalize. 
 One way to solve this problem is to divide the dataset into three chunks - **training, validation and test**
 
-* Training - Use it to train multiple models with various hyperparameters on the training set
+* Training - Use it to train multiple models( eg. LR, SVM, KNN) with various hyperparameters on the training set
 * Validation - Run those multiple models on the validation set and select the one with the best performance. Now retrain that model on the Training + Validation data (with the same hyperparameters)
 * Test - Once you get the best model, run it on the test set to check for generalization error. 
 
-##### Cross Validation
+##### [Cross Validation](https://www.youtube.com/watch?v=fSytzGwwBVw)
 
-Take a small chunk of validation data from the training data. Each model is evaluated once per validation set after it is trained on the rest of the data. By averaging out the evaluation we get a more accurate measure of the model. Drawback is that the training time is multiplied by the number of validation sets. 
+Take a small chunk of validation data from the training data at any given time. Each model is evaluated once per validation set after it is trained on the rest of the data. By averaging out the evaluation we get a more accurate measure of the model. Drawback is that the training time is multiplied by the number of validation sets. 
+
